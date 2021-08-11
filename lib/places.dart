@@ -1,30 +1,29 @@
-class Data {
+class Places {
   final String name;
   final double dist;
   final String kinds;
-  Data({
+  Places({
     required this.name,
     required this.dist,
     required this.kinds,
   });
-  Data copyWith({
+  Places copyWith({
     String? name,
     double? dist,
     String? kinds,
   }) {
-    return Data(
+    return Places(
       name: name ?? this.name,
       dist: dist ?? this.dist,
       kinds: kinds ?? this.kinds,
     );
   }
 
-  factory Data.fromMap(Map<String, dynamic> map) {
-    return Data(
+  factory Places.fromMap(Map<String, dynamic> map) {
+    return Places(
       name: map['name'],
       dist: map['dist']?.toDouble(),
       kinds: map['kinds'],
     );
   }
 }
-

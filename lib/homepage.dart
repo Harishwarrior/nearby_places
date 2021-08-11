@@ -14,10 +14,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late Future<List<Data>> futureData;
+  late Future<List<Places>> futureData;
 
   var locationData;
-  Future<List<Data>> fetchData() async {
+  Future<List<Places>> fetchData() async {
     Position locationData = await determinePosition();
 
     double lat = locationData.latitude;
@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
         'https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=$lon&lat=$lat&rate=1&format=json&apikey=5ae2e3f221c38a28845f05b60c0c6745c70108439773505405f23e8c'));
     if (response.statusCode == 200) {
       List jsonResponse = json.decode(response.body);
-      return jsonResponse.map((data) => Data.fromMap(data)).toList();
+      return jsonResponse.map((data) => Places.fromMap(data)).toList();
     } else {
       throw Exception('Unexpected error occured!');
     }
@@ -48,11 +48,11 @@ class _HomePageState extends State<HomePage> {
           title: Text('Nearby Places'),
         ),
         body: Center(
-          child: FutureBuilder<List<Data>>(
+          child: FutureBuilder<List<Places>>(
             future: locationData,
             builder: (context, snapshot) {
               if (snapshot.hasData) {
-                List<Data>? data = snapshot.data;
+                List<Places>? data = snapshot.data;
                 return ListView.builder(
                     itemCount: data!.length,
                     itemBuilder: (BuildContext context, int index) {
