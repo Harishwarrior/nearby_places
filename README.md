@@ -2,6 +2,16 @@
 
 This application shows places nearby you
 
+# Screenshots
+<table>
+  <tr>
+    <td>Home screen</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Harishwarrior/nearby_places/blob/master/screenshots/screenshot.png" width=240   height=520></td>
+  </tr>
+ </table>
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
