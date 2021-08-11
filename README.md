@@ -2,7 +2,7 @@
 
 This application shows places nearby you using [OpenTripMapAPI](https://opentripmap.io/product)
 
-# Screenshots
+## Screenshots
 <table>
   <tr>
     <td>Home screen</td>
