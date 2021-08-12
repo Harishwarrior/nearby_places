@@ -1,4 +1,4 @@
-import 'package:nearby_places/places.dart';
+import 'package:nearby_places/repository/model/places.dart';
 
 import 'api_provider.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nearby_places/homepage.dart';
+import 'package:nearby_places/screens/homepage.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,4 +17,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

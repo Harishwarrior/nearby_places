@@ -1,10 +1,6 @@
-import 'dart:async';
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:geolocator/geolocator.dart';
-import 'package:nearby_places/places.dart';
-import 'service.dart';
+import 'package:nearby_places/repository/model/places.dart';
+import 'package:nearby_places/repository/repository.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -14,29 +10,13 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late Future<List<Places>> futureData;
-
   var locationData;
-  Future<List<Places>> fetchData() async {
-    Position locationData = await determinePosition();
-
-    double lat = locationData.latitude;
-    double lon = locationData.longitude;
-
-    final response = await http.get(Uri.parse(
-        'https://api.opentripmap.com/0.1/en/places/radius?radius=10000&lon=$lon&lat=$lat&rate=1&format=json&apikey=5ae2e3f221c38a28845f05b60c0c6745c70108439773505405f23e8c'));
-    if (response.statusCode == 200) {
-      List jsonResponse = json.decode(response.body);
-      return jsonResponse.map((data) => Places.fromMap(data)).toList();
-    } else {
-      throw Exception('Unexpected error occured!');
-    }
-  }
+  Repository _repository = Repository();
 
   @override
   void initState() {
     super.initState();
-    locationData = fetchData();
+    locationData = _repository.fetchNearbyPlaces();
   }
 
   @override
