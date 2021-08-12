@@ -1,6 +1,6 @@
 # nearby_places
 
-This application shows places nearby you using [OpenTripMapAPI](https://opentripmap.io/product)
+This application shows point of interest nearby you using [OpenTripMapAPI](https://opentripmap.io/product)
 
 ## Screenshots
 <table>
