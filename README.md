@@ -1,6 +1,16 @@
 # nearby_places
 
-This application shows places nearby you
+This application shows places nearby you using [OpenTripMapAPI](https://opentripmap.io/product)
+
+## Screenshots
+<table>
+  <tr>
+    <td>Home screen</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/Harishwarrior/nearby_places/blob/master/screenshots/screenshot.png" width=240   height=520></td>
+  </tr>
+ </table>
 
 ## Getting Started
 
