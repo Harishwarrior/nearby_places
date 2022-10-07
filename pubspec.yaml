@@ -33,6 +33,8 @@ dependencies:
 
   geolocator: ^7.6.0
 
+  shimmer: ^2.0.0
+
 
 
 
