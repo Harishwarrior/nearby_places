@@ -19,7 +19,6 @@ class ApiProvider {
     final response = await client.get(Uri.parse(_url));
     if (response.statusCode == 200) {
       List jsonResponse = json.decode(response.body);
-      print(jsonResponse);
       return jsonResponse.map((data) => Places.fromMap(data)).toList();
     } else {
       throw Exception('Unexpected error occurred!');
