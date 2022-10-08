@@ -25,8 +25,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFF6D8A),
-        title: Text('Nearby Places'),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Text(
+          'Nearby Places',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.only(top: 20),
