@@ -31,7 +31,9 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.3
 
-  geolocator: ^7.3.0
+  geolocator: ^7.6.0
+
+  shimmer: ^2.0.0
 
 
 
