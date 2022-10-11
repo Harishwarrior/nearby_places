@@ -13,12 +13,12 @@ class TagDecor extends StatelessWidget {
       ),
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       decoration: BoxDecoration(
-        color: Colors.purple[200],
+        color: Color.fromARGB(255, 90, 167, 245).withOpacity(0.2),
         borderRadius: BorderRadius.circular(5),
       ),
       child: Text(
         tag.split('_').join(' '),
-        style: TextStyle(fontSize: 14, color: Colors.white),
+        style: TextStyle(fontSize: 14, color: Color.fromARGB(255, 18, 128, 217),fontWeight:FontWeight.w400),
       ),
     );
   }
